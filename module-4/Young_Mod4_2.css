@@ -1,0 +1,63 @@
+body {
+	font-size:16px;
+	}
+
+h1,h3 {
+	text-align: center;
+	color: red;
+	padding: 10px;
+}
+
+#image-gallery {
+	display:grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+	padding: 10px;
+	
+	}
+
+figure {
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
+}
+
+
+figcaption {
+	text-align: center;
+	font-style: italic;
+	font-size: .75em;
+	color: red;
+}
+
+.item {
+	float:left;
+	border:1px #FF0000;
+	border-style: solid;
+	border-radius: 0px;
+	}
+
+
+img{
+margin-top: 10%;
+width: 120px;
+height: 120px;
+display: block;
+margin: 0px auto;
+
+}
+
+h1,h3,figcaption {
+	background-color:rgba(255,0,0,0.1); /* red with opacity*/
+
+}
+
+a{
+	text-decoration: none;
+	float: right;
+	padding-top: 200px;
+}
+
+a:hover{
+	text-decoration: underline;
+}
