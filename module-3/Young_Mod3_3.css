@@ -2,7 +2,7 @@ body{
 	font-size: 16px;
 	background: white;;}
 
-.container{
+#container{
 	text-align:center;
 }
 
@@ -33,6 +33,7 @@ body{
 .column-right{
 	float:right;
 }
+
 .last-spot{
 	width:100%;
 	margin-top:60%;
