@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSD 340 Web Development with HTML and CSS</title>
+	<script>
+	function displayImage(imageFile){ 
+	var largerImage = document.getElementID("mainImage"); 
+	let img = document.createElement("img");
+	newNode.id = "#";
+	 newNode.src = "waterfall.jpg";
+	 newNode.src = "image.jpg";
+	 newNode.src = "rainforest.jpeg";
+	 newNode.src = "10-most-amazing-caves-in-the-world.jpg";
+	 newNode.alt = "Cave";
+	 newNode.alt = "Color";
+	 newNode.className = "mainImage";
+	 newNode.style.width = "300px";
+	 newNode.style.height = "200px";
+	 largerImage.parentNode.replaceChild(newNode,largerImage);
+	}
+	</script>
+	<link href="Young_mod10_3.css" rel="stylesheet">
+</head>
+<body>
+ 
+<div id="first">
+ <h1>Assignment 10.3: JavaScript - Part 2</h1>
+</div>
+
+
+
+<div id="white">
+ <a href="#" onmouseover="Cave.src='rain.jpg';" onmouseout="Cave.src='Caves.jpg';">
+ <img border="0" name="Cave" src="Caves.jpg">
+ </a>
+ 
+</div>
+<div onmouseover="this.style.color='red';" onmouseout="this.style.color='black';" style="color:black;">
+This here is an beautiful cave. Hover over to see it turn into a rainforest.
+</div>
+
+<div>
+<a href="#" onmouseover="Color.src='waterfall.jpg';" onmouseout="Color.src='image.jpg';">
+ <img border="0" name="Color" src="image.jpg">
+</a>
+</div>
+<div onmouseover="this.style.color='blue';" onmouseout="this.style.color='black';" style="color:black;">
+This is a more colorful cave. Hover over to see it turn into a waterfall.
+</div>
+</body>
+</html>
