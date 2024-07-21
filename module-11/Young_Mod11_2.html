@@ -5,18 +5,28 @@
 	<script src="main.js"></script>
 </head>
 <body>
+<header>
 	<h1>Assignment 11.2: JavaScript - Part 3</h1>
+</header>
+	
+	<main>
 	<p>This is an To Do list. Type in the the first item you want to add then click display. If you want to delete 
 	your last entry then you push the delete last entry button.</p>
-	
+	<hr>
+<div>
 	<label for="List">Add to To do List:</label>
-	<input type="text" id="inputBox" name="entry" placeholder="Add your text">
-	<button id="addItem" onclick="addItem()">Add</button>
-	<button id="displayitem"  onclick="displayItem()">Display</button>
+	<input type="text" id="todoInput" name="entry" placeholder="Add your text">
+	<button id="addItem" onclick= "addItem()" >Add Items</button>
+	<button id="displayitem"  onclick="displayItem()">Display Items</button>
 	<button id="deleteItem"    onclick="deleteItem()">Delete last entry</button>
 	<hr>
-	
-    <div id="todoList"></div>
+</div>
 
+    <div id="displayArea"></div>
+     <ul></ul>
+    <div id="todoList"></div>
+   
+    
+   </main>
 </body>
 </html>

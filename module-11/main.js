@@ -1,55 +1,36 @@
-var AddItemButton = document.getElementById('AddItem');
-var DeleteItemButton = document.getElementById('DeleteItem');
-var DisplayItemButton = document.getElementById('DisplayItem');
-var listContainer = document.getElementById('listContainer');
-var inputBox = document.getElementById('inputBox');
-
-
-
 let todoItems = [];
 
-
 function addItem() {
-    const todoInput = document.getElementById('todoInput');
-    const item = todoInput.value.trim();
-    
- 
-    AddItemButton.addEventListener('click', function(){
-	var paragraph = document.createElement('p')
-	paragraph.innerText = inputBox.value;
-	listContainer.appendChild(paragraph);
-	})
-}
-
-function deleteItem() {
-    const todoInput = document.getElementById('todoInput');
-    const item = todoInput.value.trim();
-    
-
-    DeleteItemButton.addEventListener('click', function(){
-	var paragraph = document.createElement('p')
-	paragraph.innerText = inputBox.value;
-	listContainer.appendChild(paragraph);
-	})
-}
-
-
-function displayItems() {
-    const todoList = document.getElementById('todoList');
-    todoList.innerHTML = '';
-    
-    DisplayButton.addEventListener('click', function(){
-	var paragraph = document.createElement('p')
-	paragraph.innerText = inputBox.value;
-	listContainer.appendChild(paragraph);
-	})
-
-    
-
-    for (let i = 0; i < todoItems.length; i++) {
-        const div = document.createElement('div');
-        div.textContent = todoItems[i];
-        todoList.appendChild(div);
+    let input = document.getElementById('todoInput').value;
+    if (input.trim() !== '') {
+        todoItems.push(input);
+        alert('Item: ' + input + ' Added at position ' + todoItems.length);
+        document.getElementById('todoInput').value = ''; 
+    } else {
+        alert('Please enter a valid to-do item.');
     }
 }
 
+function deleteItem() {
+    if (todoItems.length > 0) {
+        let removedItem = todoItems.pop();
+        alert('Deleted: ' + removedItem);
+    } else {
+        alert('No items to be deleted.');
+    }
+}
+
+function displayItem() {
+    let displayArea = document.getElementById('displayArea');
+    displayArea.innerHTML = '';
+    
+    if (todoItems.length > 0) {
+        for (let i = 0; i < todoItems.length; i++) {
+            let listItem = document.createElement('div');
+            listItem.textContent = (i + 1) + '. ' + todoItems[i];
+            displayArea.appendChild(listItem);
+        }
+    } else {
+        displayArea.innerHTML = 'No items to be shown';
+    }
+}
